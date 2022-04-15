@@ -12,8 +12,13 @@ public class FirstController {
         model.addAttribute("username","zune");
 
     return "greetings"; //tepletes/greetings.mutache -> 브라우저로 전송!
-}
 
+    }
+    @GetMapping("/bye")
+    public String seeYouNext(Model model){
+        model.addAttribute("nickname","zune");
+        return "goodbye";
+    }
 
 
 }
